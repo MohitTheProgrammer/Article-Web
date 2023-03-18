@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            /*background-color: blue;*/
+
+            color: white;
+        }
+
+        body>img {
+            height: 100vh;
+            width: 100vw;
+            opacity: 90%;
+            position: fixed;
+            z-index: -1;
+        }
+
+
+        #backimg {
+            background-size: cover;
+            width: 100%;
+
+            z-index: -1;
+            position: fixed;
+        }
+
+        #navbar {
+            background-color: #222c776f;
+            /* margin: 20px; */
+            display: flex;
+            position: sticky;
+            height: 60px;
+
+        }
+
+        #navbar ul {
+
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+        }
+
+        #navbar ul li {
+
+            /* padding-left: 25px; */
+            list-style: none;
+        }
+
+        #navbar ul li a {
+
+            text-decoration: none;
+            color: white;
+            padding-left: 5px;
+            margin-left: 20px;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        #logo img {
+            width: 55px;
+            margin: 0%;
+            /* filter: invert(100%); */
+        }
+
+        .image {
+            width: 200px;
+            height: 100px;
+            /* align-items: center; */
+        }
+
+        .center {
+            /* background-color: #222c776f; */
+            display: flex;
+            width: 75%;
+            height: 450px;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            flex-direction: column;
+            transform: translateY(51px);
+            ;
+        }
+
+        .img31 {
+
+            padding-top: 70px;
+
+        }
+
+        .img31 {
+            display: flex;
+        }
+
+        .img31 img {
+            margin: 5px 10px;
+            /* border: 2px solid red;
+            border-radius: 30px; */
+            opacity: 95%;
+            transition: all 250ms ease-in;
+        }
+
+        .img3 {
+
+            padding: 10px;
+            margin-bottom: 1px;
+        }
+
+        .img3 {
+            display: flex;
+        }
+
+        .img3 img {
+            margin: 5px 10px;
+            /* border: 2px solid red;
+            border-radius: 30px; */
+            opacity: 95%;
+            transition: all 250ms ease-in;
+        }
+
+        .img3 img:hover {
+            transform: scale(1.150);
+            cursor: pointer;
+        }
+
+        .img31 img:hover {
+            transform: scale(1.150);
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 0px;
+            transform: translateY(-15px);
+        }
+
+        p {
+            text-align: center;
+            transform: translateY(0px);
+        }
+
+
+        .h3 {
+            transform: translateY(60px);
+        }
+
+        .para {
+            width: 650px;
+            transform: translateY(10px);
+        }
+
+        .footer {
+            background-color: #222c776f;
+            color: white;
+            transform: translateY(98px);
+            text-align: center;
+        }
+
+
+        .textimg {
+            /* position: absolute;
+            top: 50%;
+            left:50%;
+            color: red; */
+            margin-left: 11px;
+            /* transform: translate(-50%, -50%); */
+        }
+
+        .write {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(130px);
+            align-items: center;
+        }
+
+        .write h4 {
+            text-align: center;
+            font-size: 30px;
+            transform: translateY(-50px);
+        }
+
+        .write textarea {
+            width: 640px;
+            text-align: center;
+            /* padding-top: 50px; */
+            /* font-size: 15px; */
+            border: none;
+            background-color: white;
+            transform: translateY(-40px);
+        }
+
+        .write button {
+            width: 295px;
+            transform: translateY(-30px);
+            padding: 0px;
+            height: 30px;
+            font-size: 18px;
+            border: none;
+            text-align: center;
+            color: white;
+            background-color: black;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .topic {
+            width: 640px;
+            background-color: #222c776f;
+            display: flex;
+
+            margin: auto;
+            transform: translateY(150px);
+            height: 400px;
+            flex-direction: column;
+        }
+
+        .slidshow {
+            width: 400px;
+            height: 208px;
+            margin: auto;
+            /* border: 2px solid white; */
+            background-image: url(https://images.pexels.com/photos/843256/pexels-photo-843256.jpeg?auto=compress&cs=tinysrgb&w=400);
+            background-size: 100% 100%;
+
+            transform: translateY(0px);
+
+
+            animation: slidshow 12s infinite linear;
+        }
+
+
+
+        @keyframes slidshow {
+            0% {
+                background-image: url(https://images.pexels.com/photos/843256/pexels-photo-843256.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+
+            20% {
+                background-image: url(https://images.pexels.com/photos/2890387/pexels-photo-2890387.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+
+            40% {
+                background-image: url(https://images.pexels.com/photos/792726/pexels-photo-792726.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+
+            60% {
+                background-image: url(https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+
+            80% {
+                background-image: url(https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+
+            100% {
+                background-image: url(https://images.pexels.com/photos/1488312/pexels-photo-1488312.jpeg?auto=compress&cs=tinysrgb&w=400);
+            }
+        }
+
+        .topic h2 {
+            color: white;
+            transform: translateY(0px);
+            margin: auto;
+        }
+
+        .topic input {
+            width: 250px;
+            margin: auto;
+            height: 35px;
+            transform: translateY(-5px);
+            border: none;
+        }
+
+        .topic label {
+            margin: auto;
+            transform: translateY(5px);
+        }
+
+        .topic button {
+            width: 150px;
+            margin: auto;
+            height: 30px;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 18px;
+            transform: translateY(-15px);
+        }
+
+        .contact {
+            display: flex;
+            width: 640px;
+            transform: translateY(200px);
+            margin: auto;
+            height: 500px;
+        }
+
+        .contact .add {
+            width: 40%;
+            background-color: #222c776f;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        .contact .add p {
+            text-align: left;
+
+        }
+
+        .contact .cred {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            background-color: #222c776f;
+        }
+
+        .contact .cred input {
+            width: 250px;
+            height: 35px;
+            margin-left: 75px;
+            border: none;
+        }
+
+        .contact .cred label {
+            margin-left: 75px;
+            margin: 8px 75px;
+
+        }
+
+        .contact .cred textarea {
+            width: 250px;
+            height: 120px;
+            margin-left: 75px;
+            border: none;
+        }
+
+        .contact .cred button {
+            width: 250px;
+            height: 35px;
+            margin-left: 75px;
+            margin-top: 16px;
+            border: none;
+            font-size: large;
+            background-color: black;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .aboutus {
+            width: 640px;
+            background-color: #222c776f;
+            margin: auto;
+            transform: translateY(255px);
+            display: flex;
+            height: 490px;
+        }
+
+        .aboutus1 {
+            text-align: center;
+        }
+
+        .aboutus1 h3 {
+            margin-top: 15px;
+        }
+
+        .policy {
+            text-align: center;
+        }
+
+        .policy p {
+            text-align: justify;
+            margin: 4px 25px;
+        }
+
+        .policy>h3 {
+            margin-top: 15px;
+        }
+
+        #map {
+            margin-top: 25px;
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+
+        footer {
+            transform: translateY(190px);
+        }
+        /* #topic{
+            border:2px solid black;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <img src="https://images.unsplash.com/photo-1510070009289-b5bc34383727?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80%22
+        alt=">
+    <header id="head">
+        <div id="navbar">
+            <div id="logo"><img src="/images/—Pngtree—feather pen kraft paper_4537431 (1).png" alt=""></div>
+            <ul>
+                <li> <a href="#home"><b>Home</b></a></li>
+                <li> <a href="#write"><b>Write</b></a></li>
+                <li> <a href="#topic"><b>Topics</b></a></li>
+                <li> <a href="#contact"><b>Contact Us</b></a></li>
+                <li> <a href="#about"><b>About Us</b></a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="home">
+        <div class="center">
+            <h2>Welcome to Article World</h2>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo assumenda aperiam eveniet impedit vero
+                    amet, libero perspiciatis ab natus maxime eos dolore et, dolorem delectus dolorum accusantium
+                    molestias consectetur at nihil. Optio officiis exercitationem eos magnam ipsa sit nisi, sint
+                    repudiandae provident. Fuga quo ducimus odio, illo nostrum aspernatur totam!</p>
+            </div>
+            <div class="h3">
+                <h2>Frequently Viewed Topics</h2>
+            </div>
+            <div class="img31">
+                <div class="siximg">
+                    <div class="textimg"> Fitness</div> <img class="image"
+                        src="https://images.pexels.com/photos/3094230/pexels-photo-3094230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+                <div class="siximg">
+                    <div class="textimg"> Food</div> <img class="image"
+                        src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+                <div class="siximg">
+                    <div class="textimg"> Education</div> <img class="image"
+                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+            </div>
+            <div class="img3">
+                <div class="siximg">
+                    <div class="textimg"> Traveling</div> <img class="image"
+                        src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+                <div class="siximg">
+                    <div class="textimg"> Health</div> <img class="image"
+                        src="https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1x"
+                        alt="">
+                </div>
+                <div class="siximg">
+                    <div class="textimg"> Sports</div> <img class="image"
+                        src="https://media.istockphoto.com/photos/cricket-bat-and-ball-on-cricket-pitch-picture-id1312835994?b=1&k=20&m=1312835994&s=170667a&w=0&h=Gdj_igpTeAoenS310h4UblZ4_xJ0vTmhAuOZ2owO8Hw="
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="write">
+        <div class="write">
+            <h4>Write whats in your mind</h4>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Lets write"></textarea>
+            <button>Submit</button>
+        </div>
+    </section>
+    <section id="topic">
+        <div class="topic">
+            <h2>Explore more</h2>
+            <div class="slidshow">
+            </div>
+            <label for=" Search"> <b>Search your Topic</b></label>
+            <input type="search" name="" id=" Search">
+            <button>Find</button>
+
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact">
+            <div class="add">
+                <h3>Reach Us</h3> <br>
+                <p>
+
+                    <b> 500 Terry Francois Street <br> <br>
+
+                        San Francisco, CA 94158 <br> <br>
+
+
+
+                        info@mysite.com <br> <br>
+
+
+                        Tel: 123-456-7890 <br> <br>
+
+                        OPENING HOURS: <br> <br>
+                        Mon - Fri: 7am - 10pm <br>
+
+                        ​​Saturday: 8am - 10pm <br>
+
+                        ​Sunday: 8am - 11pm</b>
+                </p>
+            </div>
+            <div class="cred">
+                <label for="Name">Name</label>
+                <input type="text" id="Name">
+                <label for="Phone">Phone No.</label>
+                <input type="text" id="Phone">
+                <label for="Email">Email</label>
+                <input type="text" id="Email">
+                <label for="Subject">Subject</label>
+                <input type="text" id="Subject">
+                <label for="message">Massege</label>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
+                <button type="submit">Submit Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="aboutus">
+
+            <div class="aboutus1">
+                <h3>Find Us on Map</h3>
+                <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112081.87334807194!2d77.2276224!3d28.613017599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4c434675ad1%3A0xec36d3ba54e8ac6c!2sMother%20Dairy%20Fruit%20%26%20Vegetable!5e0!3m2!1sen!2sin!4v1659718775875!5m2!1sen!2sin"
+                    width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="policy">
+                <h3>Our Policy</h3><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat delectus, commodi velit
+                    sit et maxime aspernatur perferendis necessitatibus incidunt quisquam sunt quo totam quae laboriosam
+                    perspiciatis aperiam, fugit, doloribus dicta suscipit quod. Corrupti, reprehenderit.</p><br><br>
+                <h3>Our Guidelines</h3><br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio corrupti ullam soluta reprehenderit
+                    molestiae, asperiores voluptatem sint quis? Aliquam beatae commodi, officiis quam eius tempora quo
+                    adipisci repellat voluptates nam ipsum tenetur inventore sed quis.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            Copywrite &copy; All Write Reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>
